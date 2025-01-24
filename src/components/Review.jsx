@@ -10,7 +10,8 @@ export default function Review({ name, location, profile, thoughts, link }) {
         flexDirection: { xs: "column-reverse", md: "row" },
       }}
     >
-      <Box
+       {/* Review Details */}
+      <Box 
         sx={{
           width: { xs: "100%", md: "555.55px" },
           height: { xs: "336px", md: "555px" },
@@ -47,7 +48,7 @@ export default function Review({ name, location, profile, thoughts, link }) {
               <Typography
                 sx={{ fontSize: {xs:'18px', md:'20px'}, lineHeight: {xs:'28px', md:'34px'}, color: "#0A1425" }}
               >
-                {thoughts}
+                {thoughts}        {/* props */}
               </Typography>
             </Box>
             <Box
@@ -68,7 +69,7 @@ export default function Review({ name, location, profile, thoughts, link }) {
                     fontFamily: "Bebas Neue",
                   }}
                 >
-                  {name}
+                  {name}        {/* props */}
                 </Typography>
                 <Typography
                   sx={{
@@ -78,7 +79,7 @@ export default function Review({ name, location, profile, thoughts, link }) {
                     color: "#333333",
                   }}
                 >
-                  {location}
+                  {location}      {/* props */}
                 </Typography>
               </Box>
               <Box sx={{ width: "40px", borderBottom: "4px solid #BD1F17" }}>
@@ -99,6 +100,7 @@ export default function Review({ name, location, profile, thoughts, link }) {
           <img src="/icon/V art.svg" alt="" style={{height:'100%'}}/>
         </Box>
       </Box>
+      {/* Review image */}
       <Box sx={{ width: { xs: "100%", md: "760px" }, height: {xs:'225px', md:'555px'} }}>
         <img src={link} alt="" style={{ width: "100%" }} />
       </Box>

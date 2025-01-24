@@ -20,7 +20,7 @@ const AboutNav = () => {
     <Box id="about">
       <Box sx={{
         borderBottom: '2px solid #B52B1D',
-        width: "624px",
+        width: {xs:'100%', md:'624px'},
         height: "36px"
       }}>
         {tabs.map((tab, idx) => (
@@ -28,11 +28,11 @@ const AboutNav = () => {
           sx={{
             fontSize: '14px', 
             lineHeight: '24px', 
-            fontWeight: 500, color:'#181818',
+            fontWeight: 500,
             borderRadius:'0px',textTransform: 'capitalize',
             p:'6px 16px', marginRight:'10px',
             backgroundColor: activeTab === idx ? '#B52B1D' : 'transparent',
-            color: activeTab === idx ? '#fff' : '#000',
+            color: activeTab === idx ? ' #fff' : ' #181818',
             ':hover': {
               backgroundColor: ' #B52B1D', 
             }

@@ -16,52 +16,51 @@ import Btn from './Btn';
 function BookYourTable() {
   const [reservationDate, setReservationDate] = useState(null);
   const [totalPeople, setTotalPeople] = useState(1);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = () => {
+    // check any blank field,
+    if (!name || !email || !reservationDate || !message) {
+      alert("Please fill in all fields.");
+      return;
+    }
+    // collecting data
+    const alertMessage = `
+      Name: ${name}
+      Email: ${email}
+      Reservation Date: ${reservationDate}
+      Total People: ${totalPeople}
+      Message: ${message}
+    `;
+    alert(alertMessage);
+
+    // all input clear but not working as I want.
+    setName('');
+    setEmail('');
+    setReservationDate(null);
+    setTotalPeople(1);
+    setMessage('');
+  };
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Box
         sx={{
-          color: '#fff',
           borderRadius: '8px',
           width: {xs:'100%', md:'635px'},
         }}
       >
-        {/* Heading Section */}
-        <Typography
-          sx={{
-            fontWeight: 'bold',
-            textTransform: 'uppercase',
-            color: 'red',
-            marginBottom: {xs:'0px', md:'8px'},
-            fontSize:{xs:'16px', md:'20px'},
-            lineHeight:{xs:'26px', md:'32px'}
-          }}
-        >
-            <img src="/icon/redRectangle.png" alt=""  style={{marginRight:"16px"}}/>
-          Book Now
-        </Typography>
-        <Typography
-          sx={{fontFamily:'Bebas Neue', fontWeight: '500', marginBottom: {xs:'2px', md:'24px'}, fontSize:{xs:'40px', md:'62px'}, lineHeight:{xs:'48px', md:'62px'},  }}
-        >
-          Book Your Table
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{ marginBottom: '24px', maxWidth: '600px',fontSize:"16px" }}
-        >
-          Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo
-          molestie vel, ornare non id blandit netus.
-        </Typography>
-
         {/* Form Section */}
         <Grid container spacing={3}>
-          {/* Name and Email Fields */}
           <Grid item xs={12} md={6}>
             <TextField
               label="Your Name *"
               fullWidth
               variant="outlined"
               InputLabelProps={{ style: { color: '#fff' } }}
+              onChange={(e) => setName(e.target.value)}
               sx={{
                 '& .MuiOutlinedInput-root': {
                   '& fieldset': { borderColor: '#fff' },
@@ -77,6 +76,7 @@ function BookYourTable() {
               fullWidth
               variant="outlined"
               InputLabelProps={{ style: { color: '#fff' } }}
+              onChange={(e) => setEmail(e.target.value)}
               sx={{
                 '& .MuiOutlinedInput-root': {
                   '& fieldset': { borderColor: '#fff' },
@@ -119,7 +119,7 @@ function BookYourTable() {
                       borderColor: '#FEBF00', 
                     },
                     '& .MuiInputBase-input': {
-                      width:{xs:'300px', md:'240px'}, 
+                      width:{xs:'72dvw', sm:'74dvw', md:'240px'}, 
                     },
                   },
                 },
@@ -163,6 +163,7 @@ function BookYourTable() {
               rows={4}
               variant="outlined"
               InputLabelProps={{ style: { color: '#fff' } }}
+              onChange={(e) => setMessage(e.target.value)}
               sx={{
                 '& .MuiOutlinedInput-root': {
                   '& fieldset': { borderColor: '#fff' },
@@ -176,7 +177,7 @@ function BookYourTable() {
 
         {/* Submit Button */}
         <Box sx={{ textAlign: 'left', marginTop: {xs:'10px', md:'24px'} }}>
-          <Btn value="book now"/>
+          <Btn value="book now" onClick={handleSubmit}/>  {/* Btn component */}
         </Box>
       </Box>
     </LocalizationProvider>

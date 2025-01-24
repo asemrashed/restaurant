@@ -42,9 +42,11 @@ function Item() {
       alignItems: 'center',
       position: 'relative',
     }}>
+      {/* Heading component with carousel control */}
       <Box sx={{ width: {xs:'80%', md:'1320px'}, height: {xs:'82px', md:'110px'}, display: 'flex' }}>
         <HeadingArrow heading="POPULAR FOOD ITEMS" handleNext={handleNext} handlePrev={handlePrev} />
       </Box>
+      {/* individual ManuItem component */}
       <Box sx={{ width: {xs:'80%', md:'1320px'}, overflow: 'hidden' }}>
         <Slider {...carousel} ref={slideRef}>
           <ManuItem link='/image/classic-burger.svg' heading="Vegetables Burger" des="Barbecue Italian cuisine pizza" />
@@ -59,6 +61,7 @@ function Item() {
           <ManuItem link='/image/pizza 1.svg' heading="Special Pizza" des="Barbecue Italian cuisine pizza" />
         </Slider>
       </Box>
+      {/* carousel control for mobile*/}
       <Box sx={{
         width:'100px',
         height:'40px',

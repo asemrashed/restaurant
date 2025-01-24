@@ -40,11 +40,13 @@ function Testimonials() {
       }}
     >
       <Box sx={{ zIndex: 1, width:{xs:'80%',md:'1320px'},display:'flex', flexDirection:'column', alignItems:'center' }}>
+         {/* Heading component */}
         <HeadingArrow
           heading="What some of my Customers say"
           handleNext={handleNext}
           handlePrev={handlePrev}
         />
+         {/* Review section */}
         <Box
           sx={{
             width: { xs: "100%", md: "1320px" },
@@ -52,6 +54,7 @@ function Testimonials() {
             mt: {xs:'10px', md:'50px'},
           }}
         >
+           {/* Review component with carousel function*/}
           <Slider {...carousel} ref={slideRef} style={{zIndex:2}}>
             <Review
               profile="/image/personP5.png"
@@ -68,6 +71,7 @@ function Testimonials() {
               link="/image/VideoP5.png"
             />
           </Slider>
+           {/* side image */}
           <Box
             sx={{
               position: "absolute",
@@ -77,7 +81,7 @@ function Testimonials() {
               zIndex:0,
             }}
           >
-            <img src="/public/image/veg1p5.png" alt="" />
+            <img src="/image/veg1p5.png" alt="" />
           </Box>
           <Box
             sx={{
@@ -88,9 +92,10 @@ function Testimonials() {
               zIndex: 0,
             }}
           >
-            <img src="/public/image/veg2p5.png" alt="" />
+            <img src="/image/veg2p5.png" alt="" />
           </Box>
         </Box>
+         {/* carousel controler for mobile */}
         <Box
           sx={{
             width: "100px",

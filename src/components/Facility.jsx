@@ -23,7 +23,7 @@ function Facility({ link, head, content }) {
           boxShadow: "0.05px 1px 0.05px rgba(49, 49, 49, 0.3)",
         }}
       >
-        <img src={link} alt="" />
+        <img src={link} alt="" /> {/* icon url*/}
       </Box>
       <Box>
         <Typography
@@ -35,7 +35,7 @@ function Facility({ link, head, content }) {
             cursor: "pointer",
           }}
         >
-          {head}
+          {head} {/* facility name*/}
         </Typography>
         <Typography
           sx={{
@@ -46,7 +46,7 @@ function Facility({ link, head, content }) {
             letterSpacing: "-1.5%",
           }}
         >
-          {content}
+          {content} {/* facility description*/}
         </Typography>
       </Box>
     </Box>

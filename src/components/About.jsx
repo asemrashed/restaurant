@@ -16,6 +16,7 @@ function About() {
         position: "relative",
       }}
     >
+      {/* top side About section */}
       <Box
         sx={{
           width: { xs: "80%", md: "1320px" },
@@ -25,6 +26,7 @@ function About() {
           justifyContent: "space-between",
         }}
       >
+        {/* left side image */}
         <Box
           sx={{
             width: { xs: "100%", md: "617px" },
@@ -73,7 +75,7 @@ function About() {
             />
           </Box>
         </Box>
-
+        {/* Right side About */}
         <Box
           sx={{
             width: { xs: "100%", md: "624px" },
@@ -84,6 +86,7 @@ function About() {
           <AboutNav />
         </Box>
       </Box>
+      {/* Bottom side facility Component */}
       <Box
         sx={{
           width: { xs: "80%", md: '1320px' },
@@ -119,7 +122,7 @@ function About() {
           zIndex:0,
         }}
       >
-        <img src="/public/image/sideImgP2.png" alt="" style={{}} />
+        <img src="/image/sideImgP2.png" alt="" style={{}} />
       </Box>
     </Box>
   );

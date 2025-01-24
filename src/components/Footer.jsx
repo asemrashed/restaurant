@@ -6,7 +6,7 @@ import Link from "./Link";
 function Footer() {
   return (
     <Box
-      id="findUs"
+      id="findUs" 
       sx={{
         width: { xs: "100%", xl: "1920px" },
         height: { xs: "999px", xl: "719.45px" },
@@ -27,6 +27,7 @@ function Footer() {
           textAlign: "center",
         }}
       >
+        {/* container */}
         <Box
           sx={{
             width: { xs: "80%", sm: "1320px" },
@@ -38,9 +39,10 @@ function Footer() {
           }}
         >
           <Box>
+            {/* heading */}
             <Typography
               sx={{
-                fontSize: { xs: "40px", sm: "62px" },
+                fontSize: { xs: "40px", md: "62px" },
                 lineHeight: {xs:'48px', md:'64px'},
                 fontFamily: "Bebas Neue",
                 color: "#FFFFFF",
@@ -48,6 +50,7 @@ function Footer() {
             >
               We ready to have you the best dining experiences
             </Typography>
+            {/* footer Item components */}
             <Box
               sx={{
                 display: "flex",
@@ -59,7 +62,7 @@ function Footer() {
               }}
             >
               <FooterItem
-                iconUrl="/icon/oppening.png"
+                iconUrl="/icon/oppening.png" //data transfar
                 head="opening hours"
                 dtls1="Monday - Sunday"
                 dtls2="9:00 AM to 11:30 PM"
@@ -85,6 +88,7 @@ function Footer() {
             </Box>
           </Box>
           <Box>
+            {/* social media links components*/}
             <Box sx={{ display: "flex", gap: "24px" }}>
               <Link iconUrl="/icon/fb.png" link="#" />
               <Link iconUrl="/icon/x.png" link="#" />
