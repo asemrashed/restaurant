@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box} from "@mui/material";
 import goldenSpoon from "/image/goldenSpoonP4.png";
 import Form from "./Form";
  

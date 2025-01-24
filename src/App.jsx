@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import { createTheme,ThemeProvider } from '@mui/material'
 import Home from './components/Home'

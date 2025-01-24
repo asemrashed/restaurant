@@ -3,7 +3,6 @@ import {
   Box,
   Typography,
   TextField,
-  Button,
   Grid,
   Select,
   MenuItem,
@@ -112,15 +111,15 @@ function BookYourTable() {
                 textField: {
                   sx: {
                     '& .MuiOutlinedInput-root': {
-                      borderRadius: '2px', // Match other input fields' border radius
-                      border: '1px solid white', // Set default border color
-                      color: 'white', // Text color
+                      borderRadius: '2px',
+                      border: '1px solid white',
+                      color: 'white', 
                     },
                     '& .MuiOutlinedInput-root.Mui-focused': {
-                      borderColor: '#FEBF00', // Set focus border color
+                      borderColor: '#FEBF00', 
                     },
                     '& .MuiInputBase-input': {
-                      width:{xs:'300px', md:'240px'}, // Match height with other input fields
+                      width:{xs:'300px', md:'240px'}, 
                     },
                   },
                 },

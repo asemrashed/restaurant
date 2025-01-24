@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box} from "@mui/material";
 import HeadingArrow from "./HeadingArrow";
 import Review from "./Review";
 import React, { useRef } from "react";

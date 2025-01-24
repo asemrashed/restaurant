@@ -8,7 +8,6 @@ import {
   Box,
   List,
   ListItem,
-  ListItemText,
   useMediaQuery,
 } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
