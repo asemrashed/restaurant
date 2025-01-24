@@ -34,7 +34,7 @@ const AboutNav = () => {
             backgroundColor: activeTab === idx ? '#B52B1D' : 'transparent',
             color: activeTab === idx ? '#fff' : '#000',
             ':hover': {
-              bgcolor: ' #B52B1D', 
+              backgroundColor: ' #B52B1D', 
               color: '#000'
             }
           }}>
