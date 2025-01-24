@@ -1,0 +1,9 @@
+#root {
+  max-width: 100%; /* Changed from 1920px to 100% */
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  margin: 0px;
+}
