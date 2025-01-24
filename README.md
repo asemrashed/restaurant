@@ -11,7 +11,7 @@ Currently, two official plugins are available:
 
 # Restaurant Website
 
-A modern, responsive restaurant website showcasing the menu and features with an elegant design.
+A responsive restaurant website where users can explore the menu, place orders, and leave reviews for food items. Built with a focus on user-friendly design, functionality, and responsiveness.
 
 ---
 
@@ -37,11 +37,11 @@ A modern, responsive restaurant website showcasing the menu and features with an
    ```bash
    git clone <repository-url>
 2. Install dependencies:
-    bash
+    ```bash
     npm install
 
 3. Run the development server:
-    bash
+    ```bash
     npm run dev
 
 Deployment:
