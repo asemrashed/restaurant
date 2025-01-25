@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Button } from "@mui/material";
 
 export default function Btn({
@@ -52,3 +53,23 @@ export default function Btn({
     </Button>
   );
 }
+// Define propTypes for the component
+Btn.propTypes = {
+  variant: PropTypes.string, 
+  value: PropTypes.string.isRequired, 
+  onClick: PropTypes.func, 
+  href: PropTypes.string,
+  height: PropTypes.string, 
+  sfsize: PropTypes.string, 
+  lfsize: PropTypes.string, 
+  color: PropTypes.string, 
+  fWeight: PropTypes.string, 
+  bg: PropTypes.string, 
+  hoverBg: PropTypes.string, 
+  hoverText: PropTypes.string, 
+  minWidth: PropTypes.string, 
+  minHeight: PropTypes.string, 
+  width: PropTypes.string, 
+  minD: PropTypes.string, 
+  maxD: PropTypes.string, 
+};

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Box, Typography } from "@mui/material";
 
 function HeadingArrow({ heading, handleNext, handlePrev }) {
@@ -76,3 +77,9 @@ function HeadingArrow({ heading, handleNext, handlePrev }) {
 }
 
 export default HeadingArrow;
+
+HeadingArrow.propTypes = {
+  heading: PropTypes.string.isRequired,
+  handleNext : PropTypes.func,
+  handlePrev : PropTypes.func
+}

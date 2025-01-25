@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Box, Typography } from "@mui/material";
 
 function Facility({ link, head, content }) {
@@ -52,5 +53,9 @@ function Facility({ link, head, content }) {
     </Box>
   );
 }
-
 export default Facility;
+Facility.propTypes = {
+  head: PropTypes.string,
+  content: PropTypes.string,
+  link: PropTypes.string,
+}

@@ -1,7 +1,8 @@
+import PropTypes from "prop-types";
 import { Box, Typography } from "@mui/material";
 
 function ManuItem({
-    imgWidth, imgHeight, link, heading, des
+    link, heading, des
 }){
     return (
         <Box sx={{
@@ -33,3 +34,9 @@ function ManuItem({
     )
 }
 export default ManuItem;
+
+ManuItem.propTypes = {
+    link:PropTypes.string.isRequired,
+    heading:PropTypes.string.isRequired,
+    des:PropTypes.string.isRequired
+}

@@ -1,5 +1,5 @@
 import { Box, Typography, Button } from "@mui/material";
-import React, { useState } from "react";
+import { useState } from "react";
 import Btn from "./Btn";
 
 const AboutNav = () => {

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Box, Typography } from "@mui/material";
 
 export default function Review({ name, location, profile, thoughts, link }) {
@@ -106,4 +107,12 @@ export default function Review({ name, location, profile, thoughts, link }) {
       </Box>
     </Box>
   );
+}
+
+Review.propTypes = {
+  name: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  profile: PropTypes.string.isRequired,
+  thoughts: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
 }

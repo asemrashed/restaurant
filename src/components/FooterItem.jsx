@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Box, Typography } from "@mui/material";
 
 export default function FooterItem({iconUrl, head, dtls1, dtls2}){
@@ -30,4 +31,10 @@ export default function FooterItem({iconUrl, head, dtls1, dtls2}){
             </Typography>
         </Box>
     )
+}
+FooterItem.propTypes = {
+    iconUrl:PropTypes.string.isRequired,
+    head:PropTypes.string.isRequired,
+    dtls1:PropTypes.string.isRequired,
+    dtls2:PropTypes.string.isRequired,
 }

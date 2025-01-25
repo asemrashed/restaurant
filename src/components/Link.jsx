@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material"; 
@@ -22,4 +23,9 @@ export default function Link({ link, iconUrl }) {
       </a>
     </Box>
   );
+}
+
+Link.propTypes = {
+  link: PropTypes.string.isRequired,
+  iconUrl: PropTypes.string.isRequired
 }
