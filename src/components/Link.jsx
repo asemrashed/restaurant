@@ -1,3 +1,4 @@
+//Reusable social media link component
 import PropTypes from "prop-types";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";

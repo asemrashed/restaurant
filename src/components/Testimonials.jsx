@@ -5,6 +5,14 @@ import { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+//Images & Icons
+import personP5 from "/image/personP5.png";
+import user from "/image/user.png";
+import videoP5 from "/image/VideoP5.png";
+import veg1p5 from "/image/veg1p5.png";
+import veg2p5 from "/image/veg2p5.png";
+import LArrow from "/icon/LArrow.png";
+import RArrow from "/icon/rArrow.png";
 
 function Testimonials() {
   //sliding function
@@ -57,18 +65,18 @@ function Testimonials() {
            {/* Review component with carousel function*/}
           <Slider {...carousel} ref={slideRef} style={{zIndex:2}}>
             <Review
-              profile="/image/personP5.png"
+              profile={personP5}
               name="kalid al dawsry"
               location="Jedda, Saudi"
               thoughts="You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly, juicy & soft (usually mandi chicken is a bit dry). I would defiantly recommend it."
-              link="/image/VideoP5.png"
+              link={videoP5}
             />
             <Review
-              profile="/image/user.png"
+              profile={user}
               name="user 5464"
               location="Dhaka, Bangladesh"
               thoughts="Shundor Zayga, Apneraw jan"
-              link="/image/VideoP5.png"
+              link={videoP5}
             />
           </Slider>
            {/* side image */}
@@ -81,7 +89,7 @@ function Testimonials() {
               zIndex:0,
             }}
           >
-            <img src="/image/veg1p5.png" alt="" />
+            <img src={veg1p5} alt="" />
           </Box>
           <Box
             sx={{
@@ -92,7 +100,7 @@ function Testimonials() {
               zIndex: 0,
             }}
           >
-            <img src="/image/veg2p5.png" alt="" />
+            <img src={veg2p5} alt="" />
           </Box>
         </Box>
          {/* carousel controler for mobile */}
@@ -120,7 +128,7 @@ function Testimonials() {
             }}
           >
             <img
-              src="/icon/LArrow.png"
+              src={LArrow}
               alt=""
               style={{ width: "8px", height: "13px" }}
             />
@@ -140,7 +148,7 @@ function Testimonials() {
             }}
           >
             <img
-              src="/icon/rArrow.png"
+              src={RArrow}
               alt=""
               style={{ width: "8px", height: "13px" }}
             />

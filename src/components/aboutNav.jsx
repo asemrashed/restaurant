@@ -1,6 +1,8 @@
 import { Box, Typography, Button } from "@mui/material";
 import { useState } from "react";
 import Btn from "./Btn";
+//icons
+import redCall from "/icon/redCall.png"
 
 const AboutNav = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -51,7 +53,7 @@ const AboutNav = () => {
         <Box sx={{ display:'flex', gap:{xs:'15px', md:'32px'}, alignItems:'center', mt:'15px'}}>
           <Btn value="about more" width="161px" hoverBg="#B52B1D" hoverText="#fff" />
           <Typography sx={{fontSize:{xs:'14px', md:'18px'}, fontWeight:700, lineHeight:'24px'}}>
-            <img src="/icon/redCall.png" alt="" style={{width:'20.5px', height:'20.5px', marginRight:'8px', marginBottom:'-2px'}}/>
+            <img src={redCall} alt="" style={{width:'20.5px', height:'20.5px', marginRight:'8px', marginBottom:'-2px'}}/>
             +88 3426 739 485
           </Typography>
         </Box>

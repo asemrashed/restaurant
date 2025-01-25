@@ -3,6 +3,8 @@ import orangeBG from "/image/Rectangle 4@2x.svg";
 import sideViewImg from "/image/sideViewP1.png";
 import linearBG from "/image/linearBG.png";
 import Btn from "./Btn";
+import offerImg from "/icon/OfferP1.svg";
+import vector from "/icon/vP1.svg";
 
 function Home() {
   return (
@@ -19,6 +21,7 @@ function Home() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        overflow:'hidden'
       }}
     >
       <Box
@@ -85,7 +88,7 @@ function Home() {
           sx={{
             width: { xs: "80%", md: "700px" },
             height: { md: "649px" },
-            position: { xs: "static"},
+            position: { xs: "static", md:'absolute'},
             right: 0,
             top: 0,
             zIndex: 0,
@@ -95,7 +98,7 @@ function Home() {
           <Box sx={{ position: "relative" }}>
             {/* icon */}
             <img
-              src="/icon/vP1.svg"
+              src={vector}
               alt="<^>"
               style={{
                 width: "45px",
@@ -114,7 +117,7 @@ function Home() {
             />
             {/* icon */}
             <img
-              src="/icon/OfferP1.svg"
+              src={offerImg}
               alt="<^>"
               style={{
                 width: "110px",

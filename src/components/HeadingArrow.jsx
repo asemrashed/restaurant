@@ -1,5 +1,9 @@
+//Reusable header component with button for carousel
 import PropTypes from "prop-types";
 import { Box, Typography } from "@mui/material";
+import LArrow from "/icon/LArrow.png";
+import RArrow from "/icon/rArrow.png";
+import redSquar from "/icon/redRectangle.png"
 
 function HeadingArrow({ heading, handleNext, handlePrev }) {
   return (
@@ -20,7 +24,7 @@ function HeadingArrow({ heading, handleNext, handlePrev }) {
             fontWeight: 600,
           }}
         >
-          <img src="/public/icon/redRectangle.png" alt="" style={{marginRight:'10px'}}/>
+          <img src={redSquar} alt="" style={{marginRight:'10px'}}/>
           Crispy, Every Bite Taste
         </Typography>
         <Typography
@@ -54,7 +58,7 @@ function HeadingArrow({ heading, handleNext, handlePrev }) {
             boxShadow:'1.15px 1.15px 9px rgba(49, 49, 49, 0.2)'
           }}
         >
-          <img src="/icon/LArrow.png" alt="" style={{width:'10.71px', height:'18.70px'}}/>
+          <img src={LArrow} alt="" style={{width:'10.71px', height:'18.70px'}}/>
         </Box>
         <Box onClick={handleNext}
           sx={{
@@ -69,7 +73,7 @@ function HeadingArrow({ heading, handleNext, handlePrev }) {
             boxShadow:'1.15px 1.15px 9px rgba(49, 49, 49, 0.2)'
           }}
         >
-          <img src="/icon/rArrow.png" alt="" style={{width:'10.71px', height:'18.70px'}}/>
+          <img src={RArrow} alt="" style={{width:'10.71px', height:'18.70px'}}/>
         </Box>
       </Box>
     </Box>

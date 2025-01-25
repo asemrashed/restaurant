@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Box, Typography } from "@mui/material";
+import vectorP5 from "/icon/V art.svg" //Icon
 
 export default function Review({ name, location, profile, thoughts, link }) {
   return (
@@ -98,7 +99,7 @@ export default function Review({ name, location, profile, thoughts, link }) {
           </Box>
         </Box>
         <Box sx={{height:'49px', position: "absolute", bottom: {xs:'-10px', md:'85px'}, left: 0 }}>
-          <img src="/icon/V art.svg" alt="" style={{height:'100%'}}/>
+          <img src={vectorP5} alt="" style={{height:'100%'}}/>
         </Box>
       </Box>
       {/* Review image */}

@@ -1,4 +1,5 @@
-import { useState } from 'react';
+// Booking form
+import { useState } from "react";
 import {
   Box,
   TextField,
@@ -7,17 +8,17 @@ import {
   MenuItem,
   FormControl,
   InputLabel,
-} from '@mui/material';
-import { LocalizationProvider, DatePicker } from '@mui/x-date-pickers';
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import Btn from './Btn';
+} from "@mui/material";
+import { LocalizationProvider} from "@mui/x-date-pickers";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import Btn from "./Btn";
 
 function BookYourTable() {
-  const [reservationDate, setReservationDate] = useState(null);
+  const [reservationDate, setReservationDate] = useState("");
   const [totalPeople, setTotalPeople] = useState(1);
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = () => {
     // check any blank field,
@@ -36,19 +37,19 @@ function BookYourTable() {
     alert(alertMessage);
 
     // all input clear but not working as I want.
-    setName('');
-    setEmail('');
-    setReservationDate(null);
+    setName("");
+    setEmail("");
+    setReservationDate("");
     setTotalPeople(1);
-    setMessage('');
+    setMessage("");
   };
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Box
         sx={{
-          borderRadius: '8px',
-          width: {xs:'100%', md:'635px'},
+          borderRadius: "8px",
+          width: { xs: "100%", md: "635px" },
         }}
       >
         {/* Form Section */}
@@ -58,14 +59,14 @@ function BookYourTable() {
               label="Your Name *"
               fullWidth
               variant="outlined"
-              InputLabelProps={{ style: { color: '#fff' } }}
+              InputLabelProps={{ style: { color: "#fff" } }}
               onChange={(e) => setName(e.target.value)}
               sx={{
-                '& .MuiOutlinedInput-root': {
-                  '& fieldset': { borderColor: '#fff' },
-                  '&.Mui-focused fieldset': { borderColor: '#FEBF00' },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": { borderColor: "#fff" },
+                  "&.Mui-focused fieldset": { borderColor: "#FEBF00" },
                 },
-                '& input': { color: '#fff' },
+                "& input": { color: "#fff" },
               }}
             />
           </Grid>
@@ -74,52 +75,40 @@ function BookYourTable() {
               label="Your Email"
               fullWidth
               variant="outlined"
-              InputLabelProps={{ style: { color: '#fff' } }}
+              InputLabelProps={{ style: { color: "#fff" } }}
               onChange={(e) => setEmail(e.target.value)}
               sx={{
-                '& .MuiOutlinedInput-root': {
-                  '& fieldset': { borderColor: '#fff' },
-                  '&.Mui-focused fieldset': { borderColor: '#FEBF00' },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": { borderColor: "#fff" },
+                  "&.Mui-focused fieldset": { borderColor: "#FEBF00" },
                 },
-                '& input': { color: '#fff' },
+                "& input": { color: "#fff" },
               }}
             />
           </Grid>
 
           {/* Reservation Date */}
           <Grid item xs={12} md={6}>
-            <DatePicker
-              label="Reservation Date"
+            <TextField
+              type="date"
+              label='Reservation a date'
               value={reservationDate}
-              onChange={(newValue) => setReservationDate(newValue)}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  fullWidth
-                  InputLabelProps={{ style: { color: '#fff' } }}
-                  sx={{
-                    '& .MuiOutlinedInput-root': {
-                      '& fieldset': { borderColor: '#fff' },
-                      '&.Mui-focused fieldset': { borderColor: '#FEBF00' },
-                    },
-                    '& input': { color: '#fff' },
-                  }}
-                />
-              )}
-              slotProps={{
-                textField: {
-                  sx: {
-                    '& .MuiOutlinedInput-root': {
-                      borderRadius: '2px',
-                      border: '1px solid white',
-                      color: 'white', 
-                    },
-                    '& .MuiOutlinedInput-root.Mui-focused': {
-                      borderColor: '#FEBF00', 
-                    },
-                    '& .MuiInputBase-input': {
-                      width:{xs:'72dvw', sm:'74dvw', md:'240px'}, 
-                    },
+              fullWidth
+              InputLabelProps={{
+                shrink: true,
+                style: { color: "#fff" },
+              }}
+              onChange = {(e) => setReservationDate(e.target.value)}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": { borderColor: "#fff" },
+                  "&:hover fieldset": { borderColor: "#FEBF00" },
+                  "&.Mui-focused fieldset": { borderColor: "#FEBF00" },
+                },
+                "& input": {
+                  color: "#fff",
+                  "&::-webkit-calendar-picker-indicator": {
+                    filter: "invert(1)",
                   },
                 },
               }}
@@ -129,18 +118,18 @@ function BookYourTable() {
           {/* Total People */}
           <Grid item xs={12} md={6}>
             <FormControl fullWidth>
-              <InputLabel sx={{ color: '#fff' }}>Total People</InputLabel>
+              <InputLabel sx={{ color: "#fff" }}>Total People</InputLabel>
               <Select
-                label='Total People'
+                label="Total People"
                 value={totalPeople}
                 onChange={(e) => setTotalPeople(e.target.value)}
                 sx={{
-                  color: '#fff',
-                  '& .MuiOutlinedInput-notchedOutline': {
-                    borderColor: '#fff',
+                  color: "#fff",
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#fff",
                   },
-                  '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                    borderColor: '#FEBF00',
+                  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#FEBF00",
                   },
                 }}
               >
@@ -161,22 +150,22 @@ function BookYourTable() {
               multiline
               rows={4}
               variant="outlined"
-              InputLabelProps={{ style: { color: '#fff' } }}
+              InputLabelProps={{ style: { color: "#fff" } }}
               onChange={(e) => setMessage(e.target.value)}
               sx={{
-                '& .MuiOutlinedInput-root': {
-                  '& fieldset': { borderColor: '#fff' },
-                  '&.Mui-focused fieldset': { borderColor: '#FEBF00' },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": { borderColor: "#fff" },
+                  "&.Mui-focused fieldset": { borderColor: "#FEBF00" },
                 },
-                '& textarea': { color: '#fff' },
+                "& textarea": { color: "#fff" },
               }}
             />
           </Grid>
         </Grid>
 
         {/* Submit Button */}
-        <Box sx={{ textAlign: 'left', marginTop: {xs:'10px', md:'24px'} }}>
-          <Btn value="book now" onClick={handleSubmit}/>  {/* Btn component */}
+        <Box sx={{ textAlign: "left", marginTop: { xs: "10px", md: "24px" } }}>
+          <Btn value="book now" onClick={handleSubmit} /> {/* Btn component */}
         </Box>
       </Box>
     </LocalizationProvider>

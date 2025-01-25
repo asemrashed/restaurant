@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import goldenSpoon from "/image/goldenSpoonP4.png";
 import Form from "./Form";
+import redSquar from "/icon/redRectangle.png" //icon
 
 function BookingForm() {
   return (
@@ -41,7 +42,7 @@ function BookingForm() {
           }}
         >
           <img
-            src="/icon/redRectangle.png"
+            src={redSquar}
             alt=""
             style={{ marginRight: "16px" }}
           />

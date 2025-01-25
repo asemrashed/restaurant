@@ -1,6 +1,13 @@
 import { Box} from "@mui/material";
 import AboutNav from "./aboutNav";
 import Facility from "./Facility";
+//images & Icons
+import imageP2 from "/image/imageP2.png";
+import exp from "/icon/marketExp.svg";
+import deleveryIcon from "/icon/delivery.png";
+import diningIcon from "/icon/dining.png";
+import pickupIcon from "/icon/pickup.png";
+import sideImg from "/image/sideImgP2.png";
 
 function About() {
   return (
@@ -41,7 +48,7 @@ function About() {
             }}
           >
             <img
-              src="/image/imageP2.png"
+              src={imageP2}
               alt=""
               style={{
                 width: "100%",
@@ -65,7 +72,7 @@ function About() {
             }}
           >
             <img
-              src="/icon/marketExp.svg"
+              src={exp}
               alt=""
               style={{
                 width: "80%",
@@ -98,17 +105,17 @@ function About() {
         }}
       >
         <Facility
-          link="/icon/delivery.png"
+          link={deleveryIcon}
           head="Fast Delevery"
           content="Within 30 minutes"
         />
         <Facility
-          link="/icon/dining.png"
+          link={diningIcon}
           head="Absolulte Dining"
           content="Best buffer restaurant"
         />
         <Facility
-          link="/icon/pickup.png"
+          link={pickupIcon}
           head="Pickup Delevery"
           content="Grab your food order"
         />
@@ -122,7 +129,7 @@ function About() {
           zIndex:0,
         }}
       >
-        <img src="/image/sideImgP2.png" alt="" style={{}} />
+        <img src={sideImg} alt="" style={{}} />
       </Box>
     </Box>
   );

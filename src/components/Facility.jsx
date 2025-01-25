@@ -1,3 +1,4 @@
+// for about section, reusable facility component
 import PropTypes from "prop-types";
 import { Box, Typography } from "@mui/material";
 
@@ -23,7 +24,7 @@ function Facility({ link, head, content }) {
           justifyContent: "center",
           boxShadow: "0.05px 1px 0.05px rgba(49, 49, 49, 0.3)",
         }}
-      >
+      > 
         <img src={link} alt="" /> {/* icon url*/}
       </Box>
       <Box>

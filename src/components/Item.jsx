@@ -6,6 +6,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {useTheme} from "@mui/material/styles";
+// images & Icons
+import item1 from "/image/classic-burger.svg";
+import item2 from "/image/pizza 1.svg";
+import item3 from "/image/french-fries.svg";
+import item4 from "/image/fried-shrimp.svg";
+import LArrow from "/icon/LArrow.png";
+import RArrow from "/icon/rArrow.png";
 
 function Item() {
    
@@ -49,16 +56,16 @@ function Item() {
       {/* individual ManuItem component */}
       <Box sx={{ width: {xs:'80%', md:'1320px'}, overflow: 'hidden' }}>
         <Slider {...carousel} ref={slideRef}>
-          <ManuItem link='/image/classic-burger.svg' heading="Vegetables Burger" des="Barbecue Italian cuisine pizza" />
-          <ManuItem link='/image/pizza 1.svg' heading="Special Pizza" des="Barbecue Italian cuisine pizza" />
-          <ManuItem link='/image/french-fries.svg' heading="Special French Fries" des="Barbecue Italian cuisine" />
-          <ManuItem link='/image/fried-shrimp.svg' heading="Cuisine Chicken" des="Japanese Cuisine Chicken" />
-          <ManuItem link='/image/french-fries.svg' heading="Special French Fries" des="Barbecue Italian cuisine" />
-          <ManuItem link='/image/classic-burger.svg' heading="Vegetables Burger" des="Barbecue Italian cuisine pizza" />
-          <ManuItem link='/image/fried-shrimp.svg' heading="Cuisine Chicken" des="Japanese Cuisine Chicken" />
-          <ManuItem link='/image/pizza 1.svg' heading="Special Pizza" des="Barbecue Italian cuisine pizza" />
-          <ManuItem link='/image/pizza 1.svg' heading="Special Pizza" des="Barbecue Italian cuisine pizza" />
-          <ManuItem link='/image/pizza 1.svg' heading="Special Pizza" des="Barbecue Italian cuisine pizza" />
+          <ManuItem link={item1} heading="Vegetables Burger" des="Barbecue Italian cuisine pizza" />
+          <ManuItem link={item2} heading="Special Pizza" des="Barbecue Italian cuisine pizza" />
+          <ManuItem link= {item3} heading="Special French Fries" des="Barbecue Italian cuisine" />
+          <ManuItem link={item4} heading="Cuisine Chicken" des="Japanese Cuisine Chicken" />
+          <ManuItem link={item3} heading="Special French Fries" des="Barbecue Italian cuisine" />
+          <ManuItem link={item1} heading="Vegetables Burger" des="Barbecue Italian cuisine pizza" />
+          <ManuItem link={item4} heading="Cuisine Chicken" des="Japanese Cuisine Chicken" />
+          <ManuItem link={item2} heading="Special Pizza" des="Barbecue Italian cuisine pizza" />
+          <ManuItem link={item2} heading="Special Pizza" des="Barbecue Italian cuisine pizza" />
+          <ManuItem link={item2} heading="Special Pizza" des="Barbecue Italian cuisine pizza" />
         </Slider>
       </Box>
       {/* carousel control for mobile*/}
@@ -81,7 +88,7 @@ function Item() {
             boxShadow:'1.15px 1.15px 9px rgba(49, 49, 49, 0.2)'
           }}
         >
-          <img src="/icon/LArrow.png" alt="" style={{width:'8px', height:'13px'}}/>
+          <img src={LArrow} alt="" style={{width:'8px', height:'13px'}}/>
         </Box>
         <Box onClick={handleNext}
           sx={{
@@ -96,7 +103,7 @@ function Item() {
             boxShadow:'1.15px 1.15px 9px rgba(49, 49, 49, 0.2)'
           }}
         >
-          <img src="/icon/rArrow.png" alt="" style={{width:'8px', height:'13px'}}/>
+          <img src={RArrow} alt="" style={{width:'8px', height:'13px'}}/>
         </Box>
       </Box>
     </Box>

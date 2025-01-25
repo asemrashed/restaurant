@@ -2,6 +2,15 @@ import { Box, Typography } from "@mui/material";
 import restaurentImg from "/image/restaurant-interior.png";
 import FooterItem from "./FooterItem";
 import Link from "./Link";
+// Icons
+import fb from "/icon/fb.png";
+import x from "/icon/x.png";
+import linkdin from "/icon/linkdin.png";
+import insta from "/icon/insta.png";
+import location from "/icon/location.png";
+import mail from "/icon/mail.png";
+import call from "/icon/call.png";
+import opening from "/icon/oppening.png";
 
 function Footer() {
   return (
@@ -62,25 +71,25 @@ function Footer() {
               }}
             >
               <FooterItem
-                iconUrl="/icon/oppening.png" //data transfar
+                iconUrl={opening} //data transfar
                 head="opening hours"
                 dtls1="Monday - Sunday"
                 dtls2="9:00 AM to 11:30 PM"
               />
               <FooterItem
-                iconUrl="/icon/call.png"
+                iconUrl={call}
                 head="lat's talk"
                 dtls1="Phone: 1-800-222-4545"
                 dtls2="Fax: 1-800-222-4545"
               />
               <FooterItem
-                iconUrl="/icon/mail.png"
+                iconUrl={mail}
                 head="Book a table"
                 dtls1="Email: demo@website.com"
                 dtls2="Support: support@website.com"
               />
               <FooterItem
-                iconUrl="/icon/location.png"
+                iconUrl={location}
                 head="our address"
                 dtls1="123 Stree New York City , United"
                 dtls2="States Of America"
@@ -90,10 +99,10 @@ function Footer() {
           <Box>
             {/* social media links components*/}
             <Box sx={{ display: "flex", gap: "24px" }}>
-              <Link iconUrl="/icon/fb.png" link="#" />
-              <Link iconUrl="/icon/x.png" link="#" />
-              <Link iconUrl="/icon/insta.png" link="#" />
-              <Link iconUrl="/icon/linkdin.png" link="#" />
+              <Link iconUrl= {fb} link="#" />
+              <Link iconUrl= {x} link="#" />
+              <Link iconUrl={insta} link="#" />
+              <Link iconUrl={linkdin} link="#" />
             </Box>
             <Typography
               sx={{
