@@ -64,6 +64,7 @@ function BookYourTable() {
               sx={{
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": { borderColor: "#fff" },
+                  "&:hover fieldset": { borderColor: "#FEBF00" },
                   "&.Mui-focused fieldset": { borderColor: "#FEBF00" },
                 },
                 "& input": { color: "#fff" },
@@ -80,6 +81,7 @@ function BookYourTable() {
               sx={{
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": { borderColor: "#fff" },
+                  "&:hover fieldset": { borderColor: "#FEBF00" },
                   "&.Mui-focused fieldset": { borderColor: "#FEBF00" },
                 },
                 "& input": { color: "#fff" },
@@ -128,6 +130,9 @@ function BookYourTable() {
                   "& .MuiOutlinedInput-notchedOutline": {
                     borderColor: "#fff",
                   },
+                  "&:hover .MuiOutlinedInput-notchedOutline": { 
+                    borderColor: "#FEBF00" ,
+                  },
                   "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
                     borderColor: "#FEBF00",
                   },
@@ -155,6 +160,7 @@ function BookYourTable() {
               sx={{
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": { borderColor: "#fff" },
+                  "&:hover fieldset": { borderColor: "#FEBF00" },
                   "&.Mui-focused fieldset": { borderColor: "#FEBF00" },
                 },
                 "& textarea": { color: "#fff" },
