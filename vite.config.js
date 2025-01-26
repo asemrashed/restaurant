@@ -7,5 +7,8 @@ export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
     include: ['@emotion/react', '@emotion/styled'],
+  },
+  build: {
+    outDir: 'dist',  // Ensure this matches the folder you want to deploy
   }
 })
